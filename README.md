@@ -43,7 +43,7 @@ MARGIN_Y = 0.5         # Vertical margin from bottom (50%)
 Simply run the script:
 
 ```bash
-python3 video_processor.py
+python video_watermark.py
 ```
 
 Processed videos will be saved in the `output/` folder with "_wm" suffix.
