@@ -15,6 +15,7 @@ import subprocess
 import tempfile
 import shutil
 from PIL import Image
+from tqdm import tqdm
 
 # ====== Параметры (из твоего задания) ======
 videos_folder = "videos"
@@ -177,7 +178,7 @@ def main():
         print("Не найдено видео в папке", videos_folder)
         return
 
-    for fname in files:
+    for fname in tqdm(files):
         in_path = os.path.join(videos_folder, fname)
         out_fname = os.path.splitext(fname)[0] + "_wm.mp4"
         out_path = os.path.join(output_folder, out_fname)
